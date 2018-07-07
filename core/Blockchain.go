@@ -52,7 +52,7 @@ func isValid(newBlock Block, oldBlock Block) bool{
 	if newBlock.PrevBlockHash != oldBlock.Hash {
 		return false
 	}
-	if calculateHash(oldBlock) != newBlock.Hash {
+	if calculateHash(newBlock) != newBlock.Hash {
 		return false
 	}
 	return true
